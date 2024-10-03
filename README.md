@@ -1,5 +1,3 @@
-# Moments
-
-
+# Memories.io
 
 Hold onto moments, not things, for memories are the truest treasures.
