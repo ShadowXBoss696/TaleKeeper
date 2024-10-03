@@ -1,3 +1,3 @@
 # Memories.io
 
-Hold onto moments, not things, for memories are the truest treasures.
+> A memory is a photograph taken by the heart to make a moment last forever.
