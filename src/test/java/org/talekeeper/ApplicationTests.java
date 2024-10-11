@@ -1,4 +1,4 @@
-package io.memories;
+package org.talekeeper;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
