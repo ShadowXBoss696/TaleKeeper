@@ -1,7 +1,7 @@
 -- Author: Arpan Mahanty
 
 INSERT INTO
-    journal_entry (content, created_at, modified_at)
+    journal_entry (content, date_of_entry, updated_at)
 VALUES
     (
         'Today was a productive day. I managed to complete all the tasks I had planned and even found time to work on some new ideas for my project.',
