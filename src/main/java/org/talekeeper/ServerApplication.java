@@ -1,5 +1,6 @@
 package org.talekeeper;
 
+import org.flywaydb.core.Flyway;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -18,6 +19,11 @@ public class ServerApplication {
 	@Autowired
 	private JournalRepository journalRepository;
 
+	@Autowired
+	private Flyway flyway;
+
+
+
 	public static void main(String[] args) {
 		SpringApplication.run(ServerApplication.class, args);
 	}
@@ -25,10 +31,13 @@ public class ServerApplication {
 	@Bean
 	public CommandLineRunner testScript() {
 		return args -> {
-			PageRequest pageCriteria = PageRequest.of(0, 100);
-			Page<JournalEntity> page = journalRepository.findAll(pageCriteria);
-			System.out.println(page.getTotalElements());
-			System.out.println(page.getContent().size());
+			flyway.clean();
+			flyway.validateWithResult();
+
+//			PageRequest pageCriteria = PageRequest.of(0, 100);
+//			Page<JournalEntity> page = journalRepository.findAll(pageCriteria);
+//			System.out.println(page.getTotalElements());
+//			System.out.println(page.getContent().size());
 			System.exit(0);
 		};
 	}
