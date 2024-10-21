@@ -13,8 +13,10 @@ import org.talekeeper.service.JournalService;
 @RequestMapping("journal")
 public class JournalResource {
 
+    // Services
     private final JournalService journalService;
 
+    @Autowired
     public JournalResource(JournalService journalService) {
         this.journalService = journalService;
     }

@@ -22,7 +22,7 @@ public class Journal {
     public Journal(JournalEntity entity) {
         this.id = entity.getId();
         this.dateOfEntry = entity.getDateOfEntry();
-        this.contentPreview = entity.getContentPreview();
+        this.contentPreview = entity.getPreview();
     }
 
     public static Journal convert(JournalEntity entity) {

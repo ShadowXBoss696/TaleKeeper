@@ -24,12 +24,20 @@ public class ResPage<T> {
         this.totalPages = totalPages;
     }
 
-    public ResPage(Page<T> pagedResult) {
-        this.data = pagedResult.getContent();
-        this.currentPage = pagedResult.getPageable().getPageNumber();
-        this.pageSize = pagedResult.getSize();
-        this.totalCount = pagedResult.getTotalElements();
-        this.totalPages = pagedResult.getTotalPages();
+    public ResPage(Page<T> page) {
+        this.data = page.getContent();
+        this.currentPage = page.getPageable().getPageNumber();
+        this.pageSize = page.getSize();
+        this.totalCount = page.getTotalElements();
+        this.totalPages = page.getTotalPages();
+    }
+
+    public List<T> getData() {
+        return data;
+    }
+
+    public void setData(List<T> data) {
+        this.data = data;
     }
 
     public int getCurrentPage() {

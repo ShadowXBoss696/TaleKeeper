@@ -13,6 +13,7 @@ public class JournalService {
 
     private final JournalRepository journalRepository;
 
+    @Autowired
     public JournalService(JournalRepository journalRepository) {
         this.journalRepository = journalRepository;
     }
